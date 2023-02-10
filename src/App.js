@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Register from "./pages/Register";
+import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
+import Feed from "./pages/Feed";
+import LegalNotice from "./pages/LegalNotice";
+import AboutUs from "./pages/AboutUs";
+import MyProfile from "./pages/MyProfile";
+
+let a = 2;
+let Auth;
+a === 1 ? (Auth = true) : (Auth = false);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header />
+      <Routes>
+        <Route path="/" element={Auth ? <Feed /> : <Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/legal-notice" element={<LegalNotice />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/user/:id" element={<MyProfile />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </main>
   );
 }
 

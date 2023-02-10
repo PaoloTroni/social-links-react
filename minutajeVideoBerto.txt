@@ -1,0 +1,38 @@
+capitulo: "estructura basica de componentes" minuto: "24" 
+        detalles: 
+        "eliminar archivos no necesarios" (min 27)
+        "editar meta datos html public y poner favicon"
+        "crear carpetas (min 29:55): components, pages (paginas del router), context, hooks"
+        "instalar react-router - $ npm install react-router-dom@6 "
+        "hacer el header y el footer (componentes) - van dentro de un <main>
+        "crear componente Auth (min 36:50) - (pagina de registro)"
+        "React router (implementacion) (min 37:50)"
+        "envolver la app en BrowserRouter (ponerlo en index.js)"
+        "importar routes"
+        "definir rutas de la app (min 43:40)"
+        "crear ruta y página de error 404 (min 49:20) - explicacion sobre ruta *"
+        "explicacion sobre links en react (min 51:50)"
+
+ capitulo: "peticiones sin autenticacion" minuto: "57:30" 
+        "hay que instalar CORS en el backend para que se pueda hacer peticiones"
+        "configurar .env (min 1:00:00)"
+        "hooks (useTweets) (min 1:04:30)"
+        "explicacion useState (min 1:06:30)"
+        "explicacion useEffect (min"1:10:30)"
+        "creacion de nueva carpeta --services-- para las funciones asyincronas de comunicacion con las BBDD (min 1:12:10)"
+        "componente que gestiona la lista de tweets (min" 1:23:30)"
+
+
+
+"/" usuario logeado = feed -- usuario desconocido = login
+
+
+"/register" = registrarse
+
+"/user/:id" = mi perfil
+
+"/about-us" = sobre nosotros
+
+"/legal-notice" aviso legal
+
+"*" = Page no encontrada
