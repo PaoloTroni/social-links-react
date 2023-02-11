@@ -6,15 +6,12 @@ export default function Footer() {
     <footer>
       <ul>
         <li>
-          <Link to="/user/:id">Mi perfil</Link>
-        </li>
-        <li>
           <Link to="/about-us">Sobre nosotros</Link>
         </li>
         <li>
           <Link to="/legal-notice">Aviso legal</Link>
         </li>
-        <li>(c) 2023 Social Links</li>
+        <li>(c) 2023 Social Link</li>
       </ul>
     </footer>
   );

@@ -23,6 +23,7 @@ capitulo: "estructura basica de componentes" minuto: "24"
         "componente que gestiona la lista de tweets (min" 1:23:30)"
 
 
+creacion de tweets 3:23:00
 
 "/" usuario logeado = feed -- usuario desconocido = login
 

@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -10,25 +11,30 @@ import LegalNotice from "./pages/LegalNotice";
 import AboutUs from "./pages/AboutUs";
 import MyProfile from "./pages/MyProfile";
 
-let a = 2; //CAMBIAR EL VALOR DE LA VARIABLE A 1 SI QUIERES VER LA RUTA "/" COMO FEED. PARA VERLA COMO LOGIN, PONER UN VALOR DIFERENTE DE 1
-let Auth;
-a === 1 ? (Auth = true) : (Auth = false);
-
-function App() {
+export default function App() {
+  const [Auth, setAuth] = useState(false);
+  const handleAuth = () => {
+    setAuth(!Auth);
+  };
   return (
-    <main>
+    <>
+      <button onClick={handleAuth}>
+        {Auth
+          ? "Cerrar sesión - botón provisional"
+          : "Iniciar sesión - botón provisional"}
+      </button>
       <Header />
-      <Routes>
-        <Route path="/" element={Auth ? <Feed /> : <Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/legal-notice" element={<LegalNotice />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/user/:id" element={<MyProfile />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={Auth ? <Feed /> : <Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/legal-notice" element={<LegalNotice />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/user/:id" element={<MyProfile />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
-
-export default App;

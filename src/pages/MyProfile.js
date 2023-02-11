@@ -1,9 +1,9 @@
 import React from "react";
-
+import DataUser from "../components/DataUser";
 export default function MyProfile() {
   return (
     <section>
-      <h2>Aqui se podrá visualizar y editar los datos de usuario</h2>
+      <DataUser />
       <button>Cerrar sesión</button>
     </section>
   );

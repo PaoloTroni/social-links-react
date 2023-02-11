@@ -17,7 +17,7 @@ export default function Login() {
         de la gana de cobrar por ello 😂)
       </p>
       <button>
-        <Link to="/Register">Volver a la página inicial</Link>
+        <Link to="/Register">Regístrate</Link>
       </button>
     </>
   );
